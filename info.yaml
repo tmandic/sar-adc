@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
+  title:        "8-bit SAR ARC"      # Project title
+  author:       "Viktor Bakija Zima, Tvrtko Mandic"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  description:  "A simple 8-bit ADC"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -14,7 +14,7 @@ project:
   analog_pins: 2        # Valid values: 0 to 6
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_sar_adc_tmandic"
 
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
@@ -24,7 +24,7 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
+  ui[0]: "clk"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -34,14 +34,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "d0"
+  uo[1]: "d1"
+  uo[2]: "d2"
+  uo[3]: "d3"
+  uo[4]: "d4"
+  uo[5]: "d5"
+  uo[6]: "d6"
+  uo[7]: "d7"
 
   # Bidirectional pins
   uio[0]: ""
@@ -54,8 +54,8 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: ""
-  ua[1]: ""
+  ua[0]: "vref"
+  ua[1]: "vin"
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""
